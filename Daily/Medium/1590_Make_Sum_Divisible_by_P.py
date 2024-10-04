@@ -25,10 +25,8 @@ class Solution:
                     if new_s % p == 0:
                         return answer
                     
-                    elif new_s % p != 0:
+                    elif length == 2:
                         return -1
         
                         
-
-
 
