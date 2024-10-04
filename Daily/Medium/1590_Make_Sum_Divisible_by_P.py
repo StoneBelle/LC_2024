@@ -24,6 +24,11 @@ class Solution:
                     # Return the number of elements that was needed to be removed, else return -1 
                     if new_s % p == 0:
                         return answer
-            return -1
+                    
+                    elif new_s % p != 0:
+                        return -1
+        
                         
+
+
 
