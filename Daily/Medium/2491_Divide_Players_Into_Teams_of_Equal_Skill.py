@@ -12,7 +12,7 @@ class Solution:
 
         # Sort given array and create teams of even skill
         ordered_skills = sorted(skill) 
-        first_half = ordered_skills[0:3] # Slices front half of array 
+        first_half = ordered_skills[0:pairs] # Slices front half of array 
         second_half = ordered_skills[length-1:-(length-pairs + 1):-1] # Slices end half of array, reverse order
         teams = tuple(zip(first_half, second_half)) # Pairs players into even teams
 
