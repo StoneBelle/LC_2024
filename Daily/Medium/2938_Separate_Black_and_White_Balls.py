@@ -1,4 +1,4 @@
-##
+## MY SOLUTION
 class Solution:
     def minimumSteps(self, s: str) -> int:
         # TWO POINTER APPROACH
@@ -16,3 +16,19 @@ class Solution:
             # else statement is not required since we focus on "0", not "1"
 
         return min_swaps
+
+
+
+### LC SOLUTION
+class Solution:
+    def minimumSteps(self, s: str) -> int:
+        # swap tracks total num of swaps
+        # black tracks num of "1" encountered during iteration
+        swap, black = 0, 0
+        for c in s:
+            # Encountering a "0"/white is a swap opportunity, in which a black ball should be
+            if c == "0":
+                swap += black # sum of swap oportunity for every black/"1" encountered
+            else:
+                black += 1
+        return swap
